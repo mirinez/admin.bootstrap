@@ -1,0 +1,98 @@
+/* 
+   style.css - DBE | Administrationsoberfläche
+   Míriam Domínguez Martínez - 30.03.2026
+*/
+
+/* ============================================
+   1. GLOBAL OVERRIDES
+*/
+
+:root {
+  --bs-body-font-family: 'Segoe UI', system-ui, sans-serif;
+
+  --primary-color: #1CA2B6;
+  --primary-hover: #e7f0ff;
+  --white: #ffffff;
+  --text-muted: #6c757d;
+  --text-dark: #495057;
+  --border-color: #dee2e6;
+  --nav-link-muted: rgba(255, 255, 255, 0.65);
+}
+
+/* ============================================
+   2. NAVBAR
+*/
+
+/* Navbar brand */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: var(--white) !important;
+}
+
+/* Active nav link */
+.navbar-nav .nav-link.active {
+  color: var(--white) !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: var(--nav-link-muted) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--white) !important;
+}
+
+/* Search button */
+.btn-search {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: transparent;
+}
+
+.btn-search:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* ============================================
+   3. TABLE
+*/
+
+/* Table header styles */
+.table thead th {
+  border-bottom: 2px solid var(--border-color);
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--text-muted);
+}
+
+/* First column bold */
+.table tbody tr td:first-child {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ============================================
+   4. PAGINATION
+*/
+
+/* Pages */
+.page-link {
+  color: var(--primary-color);
+  border-color: var(--border-color);
+}
+
+.page-link:hover {
+  background: var(--primary-hover);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
