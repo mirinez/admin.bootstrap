@@ -16,6 +16,7 @@ Dieses Projekt ist eine statische Administrationsoberfläche, erstellt mit HTML,
 ```
 /
 ├── index.html
+├── teilnehmer-neu.html
 ├── style.css
 ├── README.md
 └── bootstrap/
