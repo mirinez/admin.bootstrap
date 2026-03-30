@@ -44,7 +44,7 @@
   color: var(--white) !important;
 }
 
-/* Search button */
+/* Search button – same color as btn-primary */
 .btn-search {
   color: var(--primary-color);
   border-color: var(--primary-color);
@@ -79,7 +79,7 @@
    4. PAGINATION
 */
 
-/* Pages */
+/* Pagination – same color as btn-primary */
 .page-link {
   color: var(--primary-color);
   border-color: var(--border-color);
@@ -95,4 +95,61 @@
   background-color: var(--primary-color);
   border-color: var(--primary-color);
   color: var(--white);
+}
+
+/* ============================================
+   5. PARTICIPANT FORM
+*/
+
+/* Form section block with bottom border as separator */
+.form-section {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Section title (Name, Weitere Informationen, Kontaktmöglichkeit) */
+.form-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+/* Each label + input row */
+.form-row-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Right-aligned label */
+.form-label-left {
+  width: 220px;
+  min-width: 220px;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin-bottom: 0;
+}
+
+/* Standard input width */
+.form-input {
+  max-width: 200px;
+}
+
+/* Date input */
+.form-input-date {
+  max-width: 160px;
+}
+
+/* Time input */
+.form-input-time {
+  max-width: 130px;
+}
+
+/* Seconds input */
+.form-input-seconds {
+  max-width: 70px;
 }
