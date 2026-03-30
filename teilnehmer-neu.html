@@ -1,0 +1,191 @@
+<!-- 
+   teilnehmer-neu.html - DBE | Neuer Teilnehmer
+   Míriam Domínguez Martínez - 30.03.2026
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- ============================================
+     HEAD
+-->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBE - Neuer Teilnehmer</title>
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<!-- END OF HEAD -->
+
+<body class="bg-light">
+
+<!-- ============================================
+     NAVBAR
+-->
+
+<nav class="navbar navbar-dark bg-dark w-100" style="padding: 0.5rem 1rem;">
+  <div class="container-fluid d-flex align-items-center gap-3 flex-nowrap">
+
+    <!-- Brand -->
+    <a class="navbar-brand flex-shrink-0" href="index.html">DBE</a>
+
+    <!-- Navbar links -->
+    <ul class="navbar-nav d-flex flex-row gap-1 me-auto flex-shrink-0">
+      <li class="nav-item">
+        <a class="nav-link px-2" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active px-2" aria-current="page" href="#">Teilnehmer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2" href="#">Kurse</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2" href="#">Hilfe</a>
+      </li>
+    </ul>
+
+    <!-- Search -->
+    <form class="d-flex gap-2 flex-shrink-0" role="search">
+      <input
+        class="form-control"
+        type="search"
+        placeholder="Search"
+        aria-label="Suche"
+        style="min-width: 220px;"
+      />
+      <button class="btn btn-search" type="submit">Search</button>
+    </form>
+
+  </div>
+</nav>
+
+<!-- END OF NAVBAR -->
+
+<!-- ============================================
+     BREADCRUMB
+-->
+
+<div class="container-fluid px-4 pt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="index.html">Teilnehmer</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Neu</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- END OF BREADCRUMB -->
+
+<!-- ============================================
+     MAIN CONTENT
+-->
+
+<div class="container-fluid px-4 pb-5">
+
+  <!-- ============================================
+       NEW PARTICIPANT FORM
+  -->
+
+  <form class="participant-form">
+
+    <!-- ============================================
+         SECTION: NAME
+    -->
+
+    <div class="form-section">
+      <h5 class="form-section-title">Name</h5>
+
+      <div class="form-row-group">
+        <label class="form-label-left" for="anrede">Anrede:</label>
+        <select class="form-control form-input" id="anrede" name="anrede">
+          <option value="">-</option>
+          <option value="herr">Herr</option>
+          <option value="frau">Frau</option>
+          <option value="divers">Divers</option>
+        </select>
+      </div>
+
+      <div class="form-row-group">
+        <label class="form-label-left required" for="vorname">Vorname *:</label>
+        <input type="text" class="form-control form-input" id="vorname" name="vorname" placeholder="firstname" required>
+      </div>
+
+      <div class="form-row-group">
+        <label class="form-label-left" for="benutzername">Benutzername:</label>
+        <input type="text" class="form-control form-input" id="benutzername" name="benutzername" placeholder="username">
+      </div>
+
+      <div class="form-row-group">
+        <label class="form-label-left required" for="nachname">Nachname *:</label>
+        <input type="text" class="form-control form-input" id="nachname" name="nachname" placeholder="lastname" required>
+      </div>
+    </div>
+
+    <!-- END OF SECTION: NAME -->
+
+    <!-- ============================================
+         SECTION: WEITERE INFORMATIONEN
+    -->
+
+    <div class="form-section">
+      <h5 class="form-section-title">Weitere Informationen</h5>
+
+      <div class="form-row-group">
+        <label class="form-label-left required" for="reg-datum">Registrierungs Datum *:</label>
+        <div class="d-flex align-items-center gap-2">
+          <input type="date" class="form-control form-input-date" id="reg-datum" name="reg-datum" required>
+          <span>-</span>
+          <input type="time" class="form-control form-input-time" id="reg-time" name="reg-time">
+          <span>:</span>
+          <input type="number" class="form-control form-input-seconds" id="reg-seconds" name="reg-seconds" placeholder="57" min="0" max="59">
+        </div>
+      </div>
+    </div>
+
+    <!-- END OF SECTION: WEITERE INFORMATIONEN -->
+
+    <!-- ============================================
+         SECTION: KONTAKTMÖGLICHKEIT
+    -->
+
+    <div class="form-section">
+      <h5 class="form-section-title">Kontaktmöglichkeit</h5>
+
+      <div class="form-row-group">
+        <label class="form-label-left required" for="email">E-Mail Adresse *:</label>
+        <input type="email" class="form-control form-input" id="email" name="email" placeholder="email" required>
+      </div>
+
+      <div class="form-row-group">
+        <label class="form-label-left" for="telefon">Festnetznummer:</label>
+        <input type="tel" class="form-control form-input" id="telefon" name="telefon" placeholder="phone">
+      </div>
+    </div>
+
+    <!-- END OF SECTION: KONTAKTMÖGLICHKEIT -->
+
+    <!-- Form action buttons -->
+    <div class="d-flex gap-2 mt-3">
+      <button type="submit" class="btn btn-primary">Speichern</button>
+      <a href="index.html" class="btn btn-secondary">Abbrechen</a>
+    </div>
+
+  </form>
+
+  <!-- END OF NEW PARTICIPANT FORM -->
+
+</div>
+
+<!-- END OF MAIN CONTENT -->
+
+<!-- Bootstrap JS bundle (includes Popper) -->
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
