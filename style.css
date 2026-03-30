@@ -13,10 +13,16 @@
   --primary-color: #1CA2B6;
   --primary-hover: #e7f0ff;
   --white: #ffffff;
+  --surface-1: #f8f9fa;   /* tabla, cards */
+  --surface-2: #f1f3f5;   /* thead */
   --text-muted: #6c757d;
   --text-dark: #495057;
   --border-color: #dee2e6;
   --nav-link-muted: rgba(255, 255, 255, 0.65);
+}
+
+body {
+  background-color: var(--white) !important;
 }
 
 /* ============================================
@@ -60,6 +66,20 @@
    3. TABLE
 */
 
+.table-responsive {
+  background-color: var(--surface-1) !important;
+  border: 1px solid var(--border-color);
+}
+
+/* Thead */
+.table thead {
+  background-color: var(--surface-2) !important;
+}
+
+.table-light > * {
+  background-color: var(--surface-2) !important;
+}
+
 /* Table header styles */
 .table thead th {
   border-bottom: 2px solid var(--border-color);
@@ -70,6 +90,14 @@
 }
 
 /* First column bold */
+.table tbody tr {
+  background-color: var(--surface-1);
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--surface-2) !important;
+}
+
 .table tbody tr td:first-child {
   font-weight: 600;
   color: var(--text-dark);
